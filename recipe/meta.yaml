@@ -1,4 +1,4 @@
-{% set version = '2.3.1' %}
+{% set version = "2.4.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pmml_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pmml/pmml_{{ version }}.tar.gz
-  sha256: 97e732ce2b3799e6c60b18c30091da3bcfef2e3bc580e10ad109d7c7ebba59e3
+  sha256: bc2aab8d9089a11a5b90cc88a94618c88bae77313d5110e5c873b627e4bed2d5
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -40,19 +40,12 @@ test:
 about:
   home: https://softwareag.github.io/r-pmml/, https://github.com/SoftwareAG/r-pmml, https://www.softwareag.com/corporate/products/az/zementis/default.html
   license: GPL-3.0-only
-  summary: The Predictive Model Markup Language (PMML) is an XML-based language which provides
-    a way for applications to define machine learning, statistical and data mining models
-    and to share models between PMML compliant applications. More information about
-    the PMML industry standard and the Data Mining Group can be found at <http://www.dmg.org>.
-    The generated PMML can be imported into any PMML consuming application, such as
-    Zementis Predictive Analytics products, which integrate with web services, relational
-    database systems and deploy natively on Hadoop in conjunction with Hive, Spark or
-    Storm, as well as allow predictive analytics to be executed for IBM z Systems mainframe
-    applications and real-time, streaming analytics platforms. The package isofor (used
-    for anomaly detection) can be installed with devtools::install_github("Zelazny7/isofor").
+  summary: The Predictive Model Markup Language (PMML) is an XML-based language which provides a way for applications to define machine learning, statistical and data mining models and to share models between PMML compliant applications. More information about the PMML industry standard and the Data Mining Group can be found
+    at <http://www.dmg.org>. The generated PMML can be imported into any PMML consuming application, such as Zementis Predictive Analytics products, which integrate with web services, relational database systems and deploy natively on Hadoop in conjunction with Hive, Spark or Storm, as well as allow predictive analytics
+    to be executed for IBM z Systems mainframe applications and real-time, streaming analytics platforms. The package isofor (used for anomaly detection) can be installed with devtools::install_github("Zelazny7/isofor").
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
     - LICENSE
 
 extra:
