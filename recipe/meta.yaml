@@ -1,4 +1,4 @@
-{% set version = "2.4.0" %}
+{% set version = "2.5.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pmml_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pmml/pmml_{{ version }}.tar.gz
-  sha256: bc2aab8d9089a11a5b90cc88a94618c88bae77313d5110e5c873b627e4bed2d5
+  sha256: 84437f752f22bacea0689fbd7098d18bc926893075be7082cc28998393404afc
 
 build:
   merge_build_host: true  # [win]
