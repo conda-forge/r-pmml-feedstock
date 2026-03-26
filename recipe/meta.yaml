@@ -1,4 +1,4 @@
-{% set version = "2.5.2" %}
+{% set version = "2.6.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/pmml_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/pmml/pmml_{{ version }}.tar.gz
-  sha256: 730ae11435023ee1b65868cb40e0939d13eee926879b0200e9cd408f7d694ab9
+  sha256: 962f4781a7663b53d8d91a3c21233839a62f2574479fc2d8333c47c849bc0ffd
 
 build:
-  number: 4
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -38,9 +38,9 @@ test:
 about:
   home: https://softwareag.github.io/r-pmml/, https://github.com/SoftwareAG/r-pmml, https://www.softwareag.com/corporate/products/az/zementis/default.html
   license: GPL-3.0-only
-  summary: The Predictive Model Markup Language (PMML) is an XML-based language which provides a way for applications to define machine learning, statistical and data mining models and to share models between PMML compliant applications. More information about the PMML industry standard and the Data Mining Group can be found
-    at <http://www.dmg.org>. The generated PMML can be imported into any PMML consuming application, such as Zementis Predictive Analytics products, which integrate with web services, relational database systems and deploy natively on Hadoop in conjunction with Hive, Spark or Storm, as well as allow predictive analytics
-    to be executed for IBM z Systems mainframe applications and real-time, streaming analytics platforms. The package isofor (used for anomaly detection) can be installed with devtools::install_github("Zelazny7/isofor").
+  summary: The Predictive Model Markup Language (PMML) is an XML-based language which provides a way for applications to define machine learning, statistical and data mining models and to share models between PMML compliant applications. More information about the PMML industry standard and the Data Mining Group can be
+    found at <http://www.dmg.org>. The generated PMML can be imported into any PMML consuming application, such as Zementis Predictive Analytics products, which integrate with web services, relational database systems and deploy natively on Hadoop in conjunction with Hive, Spark or Storm, as well as allow predictive 
+    analytics to be executed for IBM z Systems mainframe applications and real-time, streaming analytics platforms. The package isofor (used for anomaly detection) can be installed with devtools::install_github("Zelazny7/isofor").
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
